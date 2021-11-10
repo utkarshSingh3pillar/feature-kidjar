@@ -1,0 +1,25 @@
+{
+  "CONFIG_ENCRYPTION_KEY": "635a0aacce00b49d3186e33b410ecf3eede5d6f47b3486c33b81207c587ee41f",
+  "AWS": {
+    "accessKeyId": "ENCRYPTED|d310e2baef20e9ad094bc703e1e2b493|70365453babbd31a8819cdd62407a97431ffdfe62702e4ae8504afbe4588cc4b",
+    "secretAccessKey": "ENCRYPTED|63ccc67ecdc806f8de09956bbc71a22d|74b94aa3c68455e8fc4d97df58ae68b41c26f3d4062464f288c30c1a9e74897e7cdb17cb8e18033022dd274ff37b75fb",
+    "region": "ENCRYPTED|bd88760be78dc1fd75f44cb24797d4d8|a86edf4c062008c040a5fec8be5d5a25"
+  },
+  "S3": {
+    "bucketName": "ENCRYPTED|b9ebe3c5c8a8bf2886ea5000d5ba89b3|12a85eebea9731dcf817e46221d5b7264736c0e4e0d1f9f30510acd364ba2c2a"
+  },
+  "Cognito": {
+    "userPoolId": "ENCRYPTED|68f94eb8d1cd90c0e1734d03d6713666|84cf6150f1e731bcb38f1db8dfb97c0df803e758a06cafcf5daea847622af887",
+    "clientId": "ENCRYPTED|cd9c709fa5f7997cb5f0766ce8ce04fa|9ae4ae9a1e8b741f70c54ea1c977c3f44d65fb7fbc47ab7bca5f715807371538"
+  },
+  "env": {
+    "PORT": 3000,
+    "HOST": "0.0.0.0",
+    "NODE_ENV": "development"
+  },
+  "contentful": {
+    "space": "ENCRYPTED|3acefcadbc3741d26e5ea5c6b8199208|0ad10bb7bd9005246a76176f351eebf3",
+    "accessToken": "ENCRYPTED|c7167587cc3b700baffdb8dc98376448|4667960a3b0a9a29ecfe555326864644beb5de01ea0cd0b82a07352e15a83eb1b4bd86ec22cb51437309b782d5a1457e",
+    "preview-accessToken": "ENCRYPTED|a701f4e58609186c61d3e92bca34a867|462322ce737580ca4f129af4dbd716a5a69d5e2799082f6333872f19e9ea1b159b0b03644b0f9f4b358613a4c1c56ab3"
+  }
+}

@@ -1,0 +1,2 @@
+process.env.NODE_ENV = 'development'
+process.env.CONFIG_ENCRYPTION_KEY='635a0aacce00b49d3186e33b410ecf3eede5d6f47b3486c33b81207c587ee41f'
