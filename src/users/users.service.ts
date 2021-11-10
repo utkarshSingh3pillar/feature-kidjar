@@ -15,12 +15,16 @@ import moment = require('moment');
 import uuidV4 = require('uuid/v4');
 import { RequestRegistrationRequestDto } from '../auth/dto';
 import { SNS } from 'aws-sdk';
+import { SynapseUserService } from './../synapse/services/user';
+import { SynapseUserAccountsService } from './../synapse/services/user.accounts';
 
 
 @Injectable()
 export class UsersService {
   constructor(private readonly userDbRepository: UserDbRepository,
-    private readonly usergoalsDbRepository: UserGoalsDbRepository
+    private readonly usergoalsDbRepository: UserGoalsDbRepository,
+    private readonly synapseUserService: SynapseUserService,
+    private readonly synapseUserAccountsService: SynapseUserAccountsService
   ) { }
   async create(user: User) {
     let data = await this.userDbRepository.createUser(user);
@@ -44,6 +48,14 @@ export class UsersService {
 
   async findOne(id: string) {
     return await this.userDbRepository.getUserData(id);
+  }
+
+  async kidJarSummary(paymentUserId : string,spendAccountId: string ) {
+    const user = await this.synapseUserService.getUser(paymentUserId);
+    let accounts = await this.synapseUserAccountsService.getUserAccount(user,spendAccountId);
+    return await accounts.data.info.balance.amount
+    
+
   }
 
   async findOneGoal(goalId: string) {

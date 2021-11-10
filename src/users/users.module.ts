@@ -12,10 +12,11 @@ import { UserGoalsDbRepository } from 'src/shared/DB/users/UserGoalsDbRepository
 import { UsersReferralsController } from './controllers/users.referrals.controller';
 import { UsersReferralService } from './services/users.referral.service';
 import { UserReferralDbRepository } from 'src/shared/DB/users/UserReferralDbRepository';
+import { KidjarController } from './kidsJar.controller';
 
 @Module({
   imports: [PassportModule.register({ defaultStrategy: 'jwt' })],
-  controllers: [UsersController, UserGoalsController, UsersReferralsController],
+  controllers: [UsersController, UserGoalsController, UsersReferralsController,KidjarController],
   providers: [AuthService, UsersService, JwtStrategy, UsersReferralService, UserDbRepository, UserReferralDbRepository,
     UserGoalsDbRepository, SynapseUserService, SynapseUserAccountsService]
 })
