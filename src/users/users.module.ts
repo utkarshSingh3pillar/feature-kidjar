@@ -13,11 +13,12 @@ import { UsersReferralsController } from './controllers/users.referrals.controll
 import { UsersReferralService } from './services/users.referral.service';
 import { UserReferralDbRepository } from 'src/shared/DB/users/UserReferralDbRepository';
 import { KidjarController } from './kidsJar.controller';
+import {UserTranscations} from './../synapse/services/user.transcations'
 
 @Module({
   imports: [PassportModule.register({ defaultStrategy: 'jwt' })],
   controllers: [UsersController, UserGoalsController, UsersReferralsController,KidjarController],
   providers: [AuthService, UsersService, JwtStrategy, UsersReferralService, UserDbRepository, UserReferralDbRepository,
-    UserGoalsDbRepository, SynapseUserService, SynapseUserAccountsService]
+    UserGoalsDbRepository, SynapseUserService, SynapseUserAccountsService,UserTranscations]
 })
 export class UsersModule { }

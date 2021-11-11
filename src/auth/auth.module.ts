@@ -9,10 +9,12 @@ import { JwtStrategy } from '../core/jwt/jwt.strategy';
 import { UsersService } from 'src/users/users.service';
 import { UserDbRepository } from 'src/shared/DB/users/UserDbRepository';
 import { UserGoalsDbRepository } from 'src/shared/DB/users/UserGoalsDbRepository';
+import {UserTranscations} from './../synapse/services/user.transcations'
+
 
 @Module({
   imports: [PassportModule.register({ defaultStrategy: 'jwt' })],
-  providers: [AuthService, JwtStrategy, UsersService, UserDbRepository, UserGoalsDbRepository, ContentService, SynapseUserService, SynapseUserAccountsService],
+  providers: [AuthService, JwtStrategy, UsersService, UserDbRepository, UserGoalsDbRepository, ContentService, SynapseUserService, SynapseUserAccountsService,UserTranscations],
   controllers: [AuthController],
 })
 export class AuthModule { }
